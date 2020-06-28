@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const transactionSchema = new Schema(
+const transactionSchema = new Schema(     //This is a mongoose model.  It contains a values field, a name field, and a date field.
   {
     name: {
       type: String,
