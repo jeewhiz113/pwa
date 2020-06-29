@@ -1,8 +1,8 @@
 let transactions = [];
 let myChart;
 
-fetch("/api/transaction")
-  .then(response => {
+fetch("/api/transaction")  //So we fetch for the data, and when data comes back, set transactions to the data array then run the three populate methods.
+  .then(response => {     //The computer runs this initially to populate the table.
     return response.json();
   })
   .then(data => {
@@ -144,8 +144,9 @@ function sendTransaction(isAdding) {
   });
 }
 
-document.querySelector("#add-btn").onclick = function() {
-  sendTransaction(true);
+document.querySelector("#add-btn").onclick = function() {  //send transaction sends the transaction to the data base to be recorded.
+                                                          //it contains code to update what the user view as well.  If clicked on, then send the transactions.
+  sendTransaction(true);  
 };
 
 document.querySelector("#sub-btn").onclick = function() {
